@@ -12,11 +12,6 @@ export default class Main extends React.Component {
     React.render(React.createElement(this, props), node)
   }
 
-  componentDidMount() {
-    let data = window.data = new Data()
-    data.parse(this.props)
-  }
-
   render() {
     return <div>
       <h1>{this.props.url}</h1>
