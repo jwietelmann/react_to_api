@@ -23,11 +23,11 @@ function setup(callback) {
   app.use(cookieParser());
   app.use(express.static(path.join(__dirname, 'public')));
 
-  jspm.import('javascripts/lib/Main.jsx').catch(function(e) {
+  jspm.import('lib/Main.jsx').catch(function(e) {
     console.error(e)
     console.error(e.stack)
   });
-  jspm.import('javascripts/lib/Main.jsx').then(function(Main) {
+  jspm.import('lib/Main.jsx').then(function(Main) {
 
     app.use('/', buildReactProxyRouter('localhost:3000', Main.default));
 

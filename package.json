@@ -19,10 +19,8 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "public",
-      "packages": "public/javascripts/jspm_packages"
+      "baseURL": "public/javascripts"
     },
-    "configFile": "public/javascripts/config.js",
     "dependencies": {
       "ejs": "npm:ejs@^2.3.3",
       "react": "npm:react@0.13"
