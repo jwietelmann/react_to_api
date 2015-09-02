@@ -1,5 +1,4 @@
 import React from 'react'
-import Data from './data.es6'
 
 export default class Main extends React.Component {
 
