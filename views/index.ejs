@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="text/javascript" src="/javascripts/jspm_packages/system.js"></script>
+    <script type="text/javascript" src="/javascripts/config.js"></script>
+  </head>
+  <body>
+    <div id="<%= containerId %>" data-react-props="<%= containerPropsJson %>">
+      <%- containerMarkup %>
+    </div>
+    <script type="text/javascript">
+      System.import('lib/Main.jsx').then(function(x) {
+        x.default.reinflateOnClient('<%- containerId %>');
+      });
+    </script>
+  </body>
+</html>
